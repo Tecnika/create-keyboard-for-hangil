@@ -5,6 +5,7 @@ let close_h = [' ', 'ㄱ', 'ㄲ', 'ㄳ', 'ㄴ', 'ㄵ', 'ㄶ', 'ㄷ', 'ㄹ', 'ㄺ
 let dubble = ['ㄳ', 'ㄵ', 'ㄶ', 'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅄ'];
 let all_syllable = [];
 let massive = 'let hangil =';
+let decryption='';
 let count_s = 0;
 let first = 0;
 let second = 0;
@@ -115,6 +116,7 @@ function mypain(k) {
 function create_arr(i, j, k) {
 
     all_syllable[i][j][k] = hangil[count_s];
+    decryption[i][j][k]=start[i] + middle[j] +  close_h[k];
     count_s++;
     console.log(start[i] + '+' + middle[j] + '+' + close_h[k] + '=' + all_syllable[i][j][k]);
 
@@ -122,6 +124,8 @@ function create_arr(i, j, k) {
 
 function create_arr_one(i, j, m, k) {
     all_syllable[i][j][m][k] = hangil[count_s];
+    
+    decryption[i][j][k]=start[i] + middle[j] +  close_h[m];
     count_s++;
     console.log(start[i] + '+' + middle[j] + '+' + close_h[m] + '=' + all_syllable[i][j][m][k]);
 

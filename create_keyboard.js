@@ -23,28 +23,25 @@ function createkeyboard() {
 let content_field = document.querySelector('.input_block_in');
 createkeyboard();
 let content_backup = '';
+let content_backup_syllable = '';
 
-window.onload = function() {
+window.onload = function () {
     let btns = document.querySelectorAll('.key_btn');
     btns.forEach(element => {
         //     console.log(element);
-        element.onclick = function() {
+        element.onclick = function () {
             content_field.value += element.innerHTML;
             change_input(element.innerHTML)
         }
     });
-    content_field.oninput = function() {
-        change_input()
-    }
 }
 
 function change_input(elem) {
-    console.log(!elem);
-    if (!elem) {
-        content_backup += elem;
-    } else {
-        content_backup = co
-    }
-
+    content_backup += elem;
+    content_backup_syllable = content_backup;
     console.log(content_backup)
+}
+
+function reolacement(){
+    
 }
