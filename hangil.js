@@ -16,13 +16,13 @@ create();
 // console.log(all_syllable[0][0][1]);
 // console.log(all_syllable[0][0][1][0]);
 create_arr_for_programm()
-// console.log(JSON.stringify(all_syllable));
+    // console.log(JSON.stringify(all_syllable));
 
 
 
 function create() {
     // for (let i = 0; i < 2; i++) {
-         for (let i = 0; i < start.length; i++) {
+    for (let i = 0; i < start.length; i++) {
         // let i = 0;
         all_syllable[i] = [];
         console.log('Создаем массив на букву ' + start[i]);
@@ -129,7 +129,7 @@ function create_arr_one(i, j, m, k) {
 
 function create_arr_dubble(i, j, m, k, first, second) {
     let a = m;
-  //  if (m == 3) {
+    //  if (m == 3) {
     //    m = 1
     //}
     all_syllable[i][j][m][k] = hangil[count_s];
@@ -148,8 +148,8 @@ function create_arr_for_programm() {
 
                 if (Array.isArray(all_syllable[i][j][k])) {
                     massive += '['
-                    // console.log(all_syllable[i][j][k]);
-                    // console.log(all_syllable[i][j][k].length);
+                        // console.log(all_syllable[i][j][k]);
+                        // console.log(all_syllable[i][j][k].length);
                     for (let n = 0; n < all_syllable[i][j][k].length; n++) {
                         massive = massive + "'" + all_syllable[i][j][k][n] + "',";
                     }
@@ -162,5 +162,5 @@ function create_arr_for_programm() {
         massive += '],';
     }
     massive += '];';
-console.log(massive);
+    console.log(massive);
 }
